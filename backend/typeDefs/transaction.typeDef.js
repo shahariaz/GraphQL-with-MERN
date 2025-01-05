@@ -12,8 +12,6 @@ type Transaction{
 type Query{
   getAllTransactions: [Transaction!]
   getTransaction(transactionId:ID!):Transaction
-  getTransactionsByUser(userId:ID!):[Transaction!]
-
 }
 type Mutation{
   createTransaction(input:CreateTransactionInput!):Transaction!

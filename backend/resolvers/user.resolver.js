@@ -4,7 +4,10 @@ const userResolver = {
     users: () => {
       return users;
     },
-    Mutation: {},
+    user: (_, { userId }) => {
+      return users.find((user) => user.id === userId);
+    },
   },
+  Mutation: {},
 };
 export default userResolver;
